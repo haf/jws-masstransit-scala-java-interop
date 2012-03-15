@@ -8,7 +8,26 @@ AMQP 0.9
 
 Send to exchange: `Jayway.Test.Receiver`
 
-Sample JSON:
+Sample JSON for sending to a message type:
+
+```
+ {
+  "destinationAddress": "rabbitmq://isomorphism/Jayway.Test.Messages:ChatMessage",
+  "headers": {},
+  "message": {
+    "spoken": "Something wierd is going on!",
+    "seqId": 3
+  },
+  "messageType": [
+    "urn:message:Jayway.Test.Messages.DynamicImpl:ChatMessage",
+    "urn:message:Jayway.Test.Messages:ChatMessage"
+  ],
+  "retryCount": 0,
+  "sourceAddress": "rabbitmq://isomorphism/Jayway.Test.SampleSender"
+}
+```
+
+Sample JSON for sending directly to an endpoint:
 
 ```
  {
