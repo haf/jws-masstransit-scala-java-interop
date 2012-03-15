@@ -27,6 +27,13 @@ Sample JSON for sending to a message type:
 }
 ```
 
+Which translates to these required properties:
+	
+ * message
+ * messageType
+ * destinationAddress
+ * sourceAddress
+
 Sample JSON for sending directly to an endpoint:
 
 ```
@@ -44,3 +51,10 @@ Sample JSON for sending directly to an endpoint:
   "retryCount": 0
 }
 ```
+
+Which translates to these required properties:
+	
+ * message
+ * messageType
+ * destinationAddress
+ 
